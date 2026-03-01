@@ -2125,6 +2125,12 @@ h1, h2, h3, h4, h5, h6 {
     gap: 50px;
 }
 
+.contact-grid-full {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .contact-info-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
