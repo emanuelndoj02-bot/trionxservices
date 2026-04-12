@@ -1,214 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Commercial plumbing services by TrionX — fixture replacements, leak repairs, drain clearing, and faucet servicing for retail, offices, and restaurants in South Florida.">
-    <meta name="keywords" content="commercial plumbing, leak repair, fixture replacement, drain clearing, faucet repair, Miami FL, South Florida, Miami">
-    <title>Plumbing Services | TrionX</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Commercial plumbing services across Florida — fixtures, drain clearing, water heaters, pipe repair, and restroom maintenance by TrionX.">
+  <title>Plumbing Services | TrionX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-left">
-                <span><i class="fas fa-map-marker-alt"></i> 66 West Flagler Street, 9th Floor, Miami, FL 33130</span>
-                <span><i class="fas fa-phone-alt"></i> <a href="tel:+17866289227">(786) 628-9227</a></span>
-                <span><i class="fas fa-envelope"></i> <a href="mailto:service@trionxservices.com">service@trionxservices.com</a></span>
-            </div>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="img/logo.png" alt="TrionX">
+      </a>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle">Services <span class="chevron">&#9660;</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="solutions.html">All Services</a>
+            <a href="electrical.html">Electrical</a>
+            <a href="plumbing.html">Plumbing</a>
+            <a href="glass.html">Glass</a>
+            <a href="refrigeration.html">Refrigeration</a>
+            <a href="lighting-maintenance.html">Lighting Maintenance</a>
+            <a href="general-maintenance.html">General Maintenance</a>
+          </div>
         </div>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+17866289227" class="header-phone">(786) 628-9227</a>
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-primary">Request Service</a>
+        </div>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Header -->
-    <header class="site-header" id="header">
-        <div class="container">
-            <div class="header-inner">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="logo.png/logo.png.png" alt="TrionX" class="logo-img">
-                    </a>
-                </div>
-                <nav class="main-nav" id="mainNav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="has-dropdown current-menu-item">
-                            <a href="solutions.html">Solutions <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown">
-                                <li><a href="electrical.html"><i class="fas fa-bolt"></i> Electrical</a></li>
-                                <li><a href="plumbing.html"><i class="fas fa-faucet"></i> Plumbing</a></li>
-                                <li><a href="general-maintenance.html"><i class="fas fa-tools"></i> General Maintenance</a></li>
-                                <li><a href="glass.html"><i class="fas fa-border-all"></i> Glass</a></li>
-                                <li><a href="refrigeration.html"><i class="fas fa-snowflake"></i> Refrigeration</a></li>
-                                <li><a href="lighting-maintenance.html"><i class="fas fa-lightbulb"></i> Lighting Maintenance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-cta">
-                    <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
-                </div>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <button class="mobile-dropdown-toggle">Services <span>&#9660;</span></button>
+    <div class="mobile-dropdown-content">
+      <a href="solutions.html">All Services</a>
+      <a href="electrical.html">Electrical</a>
+      <a href="plumbing.html">Plumbing</a>
+      <a href="glass.html">Glass</a>
+      <a href="refrigeration.html">Refrigeration</a>
+      <a href="lighting-maintenance.html">Lighting Maintenance</a>
+      <a href="general-maintenance.html">General Maintenance</a>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+17866289227" style="margin-top: 24px; color: var(--primary); font-weight: 600;">(786) 628-9227</a>
+  </nav>
 
-    <!-- Page Header -->
-    <section class="page-header page-header-services">
-        <div class="container">
-            <h1>Plumbing Services</h1>
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a> <span>/</span> <a href="solutions.html">Solutions</a> <span>/</span> <a href="solutions.html#facility-maintenance">Facility Maintenance</a> <span>/</span> Plumbing
-            </div>
-        </div>
-    </section>
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <a href="solutions.html">Services</a> <span>/</span> Plumbing
+      </div>
+      <h1>Plumbing Services</h1>
+    </div>
+  </section>
 
-    <!-- Service Detail -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="service-detail-grid">
-                <div class="service-detail-img">
-                    <img src="Pictures/plumbing.jpg" alt="Commercial plumbing repair work">
-                </div>
-                <div class="service-detail-content">
-                    <span class="section-subtitle">Facility Maintenance</span>
-                    <h2>Commercial Plumbing Services</h2>
-                    <p>TrionX handles commercial plumbing repairs and maintenance for retail stores, offices, restaurants, and multi-site businesses. From leaking faucets to fixture replacements, we keep your facilities functioning properly.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check-circle"></i> Fixture replacements & installations</li>
-                        <li><i class="fas fa-check-circle"></i> Leak detection & pipe repairs</li>
-                        <li><i class="fas fa-check-circle"></i> Faucet, toilet & urinal servicing</li>
-                        <li><i class="fas fa-check-circle"></i> Drain clearing & maintenance</li>
-                        <li><i class="fas fa-check-circle"></i> Water heater troubleshooting</li>
-                        <li><i class="fas fa-check-circle"></i> Supply line repairs & replacements</li>
-                        <li><i class="fas fa-check-circle"></i> Shut-off valve repairs</li>
-                        <li><i class="fas fa-check-circle"></i> Restroom fixture upgrades</li>
-                    </ul>
-                    <p>Plumbing problems can disrupt operations and affect customers. Our team responds quickly with clean, thorough work that gets your space back to normal.</p>
-                    <a href="contact.html#request-service" class="btn btn-primary">Submit a Work Order</a>
-                </div>
-            </div>
+  <section class="section-padding">
+    <div class="container">
+      <div class="service-detail">
+        <div class="service-detail-text">
+          <h2>Commercial Plumbing Maintenance</h2>
+          <p>TrionX provides responsive commercial plumbing services for retail, restaurant, office, and industrial properties across Florida. From fixture repairs to water heater replacements, our licensed plumbers resolve issues quickly to minimize business disruption.</p>
+          <p>We handle both scheduled maintenance and emergency plumbing calls with guaranteed response times and complete documentation.</p>
+          <ul class="service-checklist">
+            <li>Fixture repair and replacement (faucets, toilets, sinks)</li>
+            <li>Drain clearing and sewer line maintenance</li>
+            <li>Water heater service and replacement</li>
+            <li>Pipe repair, re-routing, and leak detection</li>
+            <li>Restroom maintenance and upgrades</li>
+            <li>Backflow prevention and testing</li>
+            <li>Emergency plumbing response</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Request Plumbing Service</a>
         </div>
-    </section>
+        <div class="service-detail-image">
+          <img src="Pictures/plumbing.jpg" alt="Commercial plumbing work">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Why Choose TrionX -->
-    <section class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Why TrionX</span>
-                <h2 class="section-title">Why Choose TrionX for Plumbing Work</h2>
-            </div>
-            <div class="solutions-cards-grid cols-3">
-                <div class="sol-card">
-                    <div class="sol-card-icon"><i class="fas fa-clock"></i></div>
-                    <h4>Responsive Service</h4>
-                    <ul>
-                        <li>Rapid dispatch for plumbing emergencies</li>
-                        <li>SLA-compliant scheduling</li>
-                        <li>Weekend & after-hours availability</li>
-                    </ul>
-                </div>
-                <div class="sol-card">
-                    <div class="sol-card-icon"><i class="fas fa-broom"></i></div>
-                    <h4>Clean & Professional</h4>
-                    <ul>
-                        <li>Work area left spotless</li>
-                        <li>Proper disposal of old materials</li>
-                        <li>Minimal disruption to your business</li>
-                    </ul>
-                </div>
-                <div class="sol-card">
-                    <div class="sol-card-icon"><i class="fas fa-file-alt"></i></div>
-                    <h4>Detailed Reporting</h4>
-                    <ul>
-                        <li>Before & after photo documentation</li>
-                        <li>Complete work order reports</li>
-                        <li>Recommendations for future repairs</li>
-                    </ul>
-                </div>
-            </div>
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="service-why text-center">
+        <h2>Why Choose TrionX for Plumbing</h2>
+      </div>
+      <div class="service-why">
+        <div class="service-why-item">
+          <h3>Fast Leak Response</h3>
+          <p>Water damage escalates quickly. We dispatch plumbers within SLA windows and provide real-time updates to minimize property damage and downtime.</p>
         </div>
-    </section>
+        <div class="service-why-item">
+          <h3>Full Documentation</h3>
+          <p>Every plumbing call includes before-and-after photos, detailed work descriptions, and parts used. Reports are uploaded the same day the work is completed.</p>
+        </div>
+        <div class="service-why-item">
+          <h3>Preventive Programs</h3>
+          <p>Routine drain maintenance and fixture inspections help prevent emergency calls. We work with property managers to schedule recurring plumbing maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" style="background-image: url('Pictures/buildings.jpg');">
-        <div class="cta-overlay"></div>
-        <div class="container">
-            <div class="cta-content text-center">
-                <h2>Need Commercial Plumbing Service?</h2>
-                <p>From a leaking faucet to a full restroom renovation, TrionX delivers dependable results.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html#request-service" class="btn btn-primary btn-lg">Submit a Work Order</a>
-                    <a href="contact.html#quote" class="btn btn-outline-white btn-lg">Request a Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="cta-bar">
+    <div class="container">
+      <div>
+        <h3>Ready to get started?</h3>
+        <p>Contact us to discuss your facility maintenance needs.</p>
+      </div>
+      <div class="cta-bar-actions">
+        <a href="tel:+17866289227" class="cta-bar-phone">(786) 628-9227</a>
+        <a href="contact.html" class="btn btn-white">Request Service</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-main">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col footer-about">
-                        <div class="footer-logo">
-                            <img src="logo.png/logo.png.png" alt="TrionX" class="footer-logo-img">
-                        </div>
-                        <p>TrionX is a Miami-based commercial service contractor providing professional Facility Maintenance services across South Florida and surrounding areas.</p>
-                        <div class="footer-social">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-links">
-                        <div class="footer-col">
-                            <h4>Solutions</h4>
-                            <ul>
-                                <li><a href="solutions.html#facility-maintenance">Facility Maintenance</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Quick Links</h4>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="contact.html#quote">Get a Quote</a></li>
-                                <li><a href="contact.html#request-service">Request Service</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col footer-contact">
-                            <h4>Contact Info</h4>
-                            <ul>
-                                <li><a href="https://maps.google.com/?q=66+West+Flagler+Street+9th+Floor+Miami+FL+33130"><i class="fas fa-map-marker-alt"></i> 66 West Flagler Street, 9th Floor, Miami, FL 33130</a></li>
-                                <li><a href="tel:+17866289227"><i class="fas fa-phone-alt"></i> (786) 628-9227</a></li>
-                                <li><a href="mailto:service@trionxservices.com"><i class="fas fa-envelope"></i> service@trionxservices.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><img src="img/logo.png" alt="TrionX"></div>
+          <p>Commercial facility maintenance services across Florida. Licensed, insured, and vendor-compliant.</p>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-inner">
-                    <p>&copy; 2022 TrionX. All Rights Reserved.</p>
-                    <p>Reliable Commercial Services &mdash; Done Right.</p>
-                </div>
-            </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="electrical.html">Electrical</a>
+          <a href="plumbing.html">Plumbing</a>
+          <a href="glass.html">Glass</a>
+          <a href="refrigeration.html">Refrigeration</a>
+          <a href="lighting-maintenance.html">Lighting Maintenance</a>
+          <a href="general-maintenance.html">General Maintenance</a>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="solutions.html">All Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>66 West Flagler Street, 9th Floor<br>Miami, FL 33130</p>
+          <p><a href="tel:+17866289227">(786) 628-9227</a></p>
+          <p><a href="mailto:service@trionxservices.com">service@trionxservices.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2022 TrionX. All rights reserved.</p>
+        <p>Licensed &amp; Insured</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

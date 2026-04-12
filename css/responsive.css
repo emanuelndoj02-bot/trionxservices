@@ -1,504 +1,243 @@
 /* =============================================
-   TRIONX - Responsive Styles
+   TRIONX — Responsive Stylesheet
    ============================================= */
 
-/* ---- Tablet Landscape ---- */
+/* ---- Tablet (max-width: 1024px) ---- */
 @media (max-width: 1024px) {
-    .container {
-        padding: 0 25px;
-    }
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
 
-    .section-padding {
-        padding: 60px 0;
-    }
+  .section-padding { padding: 72px 0; }
 
-    .section-title {
-        font-size: 30px;
-    }
+  .about-preview {
+    gap: 40px;
+  }
 
-    .hero-content h1 {
-        font-size: 40px;
-    }
+  .service-detail {
+    grid-template-columns: 55% 45%;
+    gap: 36px;
+  }
 
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
 
-    .feature-item {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
+  .contact-grid {
+    grid-template-columns: 58% 42%;
+    gap: 36px;
+  }
 
-    .about-grid {
-        gap: 40px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .why-us-grid {
-        gap: 40px;
-    }
-
-    .testimonials-slider {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .testimonial-card:nth-child(3) {
-        display: none;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .service-detail-grid {
-        gap: 40px;
-    }
-
-    /* TrionX-specific */
-    .industries-home-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .service-area-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .partner-types {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .cta-content h2 {
-        font-size: 34px;
-    }
+  .differentiators-grid {
+    gap: 32px 40px;
+  }
 }
 
-/* ---- Tablet Portrait ---- */
+/* ---- Mobile (max-width: 768px) ---- */
 @media (max-width: 768px) {
-    .top-bar-left {
-        display: none;
-    }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
 
-    .top-bar .container {
-        justify-content: center;
-    }
+  .section-padding { padding: 56px 0; }
 
-    .header-inner {
-        height: 70px;
-    }
+  /* Header */
+  .header-nav,
+  .header-actions .header-phone,
+  .header-cta {
+    display: none;
+  }
 
-    .header-cta {
-        display: none;
-    }
+  .mobile-toggle {
+    display: block;
+  }
 
-    .mobile-toggle {
-        display: flex;
-    }
+  .mobile-nav {
+    display: block;
+  }
 
-    .main-nav {
-        position: fixed;
-        top: 0;
-        right: -300px;
-        width: 300px;
-        height: 100vh;
-        background: var(--white);
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
-        transition: right 0.3s ease;
-        z-index: 1000;
-        padding: 80px 0 30px;
-        overflow-y: auto;
-    }
+  /* Hero */
+  .hero {
+    min-height: 420px;
+  }
 
-    .main-nav.open {
-        right: 0;
-    }
+  .hero-content h1 {
+    font-size: 1.85rem;
+  }
 
-    .main-nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
+  .hero-content p {
+    font-size: 1rem;
+  }
 
-    .main-nav > ul > li > a {
-        padding: 15px 25px;
-        border-bottom: 1px solid var(--border);
-    }
+  /* Credibility Strip */
+  .credibility-strip .container {
+    flex-wrap: wrap;
+    gap: 0;
+  }
 
-    .main-nav > ul > li > a::after {
-        display: none;
-    }
+  .credibility-item {
+    flex: 0 0 50%;
+    text-align: center;
+    padding: 10px 16px;
+    border-left: none;
+  }
 
-    .dropdown {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        border-top: none;
-        border-radius: 0;
-        background: var(--off-white);
-        display: none;
-    }
+  .credibility-item:nth-child(1),
+  .credibility-item:nth-child(2) {
+    border-bottom: 1px solid var(--border);
+  }
 
-    .has-dropdown.open .dropdown {
-        display: block;
-    }
+  .credibility-item:nth-child(even) {
+    border-left: 1px solid var(--border);
+  }
 
-    .dropdown li a {
-        padding-left: 40px;
-    }
+  /* About Preview */
+  .about-preview {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .hero-section {
-        height: 500px;
-    }
+  .about-preview-image {
+    order: -1;
+  }
 
-    .hero-content h1 {
-        font-size: 32px;
-    }
+  /* Service Detail */
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .hero-content p {
-        font-size: 15px;
-    }
+  .service-detail-image {
+    order: -1;
+  }
 
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 
-    .about-img-secondary {
-        bottom: -20px;
-        right: 0;
-        width: 160px;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
 
-    .experience-badge {
-        left: 0;
-    }
+  /* CTA Bar */
+  .cta-bar {
+    padding: 40px 0;
+  }
 
-    .about-features {
-        grid-template-columns: 1fr;
-    }
+  .cta-bar .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
+  .cta-bar-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    .cta-content h2 {
-        font-size: 30px;
-    }
+  /* Two Column Utility */
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .why-us-grid {
-        grid-template-columns: 1fr;
-    }
+  /* Differentiators */
+  .differentiators-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 
-    .why-us-image {
-        order: -1;
-    }
+  /* Solutions */
+  .solution-band {
+    padding: 48px 0;
+  }
 
-    .why-us-image > img {
-        height: 350px;
-    }
-
-    .stats-box {
-        position: static;
-        margin-top: 20px;
-    }
-
-    .testimonials-slider {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .testimonial-card:nth-child(3) {
-        display: block;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom-inner {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .service-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .service-detail:nth-child(even) .service-detail-grid {
-        direction: ltr;
-    }
-
-    .service-detail-img img {
-        height: 300px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info-cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .page-header {
-        padding: 60px 0 40px;
-    }
-
-    .page-header h1 {
-        font-size: 32px;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    /* TrionX-specific */
-    .solutions-home-grid {
-        grid-template-columns: 1fr;
-        max-width: 550px;
-        margin: 0 auto;
-    }
-
-    .industries-home-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .industry-home-item {
-        height: 170px;
-    }
-
-    .industries-detail-grid {
-        grid-template-columns: 1fr;
-        max-width: 550px;
-        margin: 0 auto;
-    }
-
-    .why-rts-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .service-area-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-about-highlights {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .partner-types {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  /* Map */
+  .map-section iframe {
+    height: 300px;
+  }
 }
 
-/* ---- Mobile ---- */
+/* ---- Small Mobile (max-width: 480px) ---- */
 @media (max-width: 480px) {
-    html {
-        font-size: 15px;
-    }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
 
-    .container {
-        padding: 0 15px;
-    }
+  .container {
+    padding: 0 16px;
+  }
 
-    .section-padding {
-        padding: 50px 0;
-    }
+  .section-padding { padding: 44px 0; }
 
-    .section-title {
-        font-size: 26px;
-    }
+  /* Hero */
+  .hero {
+    min-height: 360px;
+  }
 
-    .section-desc {
-        font-size: 14px;
-    }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
 
-    .hero-section {
-        height: 450px;
-    }
+  .hero-content .btn {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
 
-    .hero-content h1 {
-        font-size: 26px;
-    }
+  /* Credibility */
+  .credibility-item {
+    flex: 0 0 100%;
+    border-left: none !important;
+  }
 
-    .hero-content p {
-        font-size: 14px;
-    }
+  .credibility-item + .credibility-item {
+    border-top: 1px solid var(--border);
+  }
 
-    .hero-buttons .btn {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
+  .credibility-item:nth-child(1),
+  .credibility-item:nth-child(2) {
+    border-bottom: none;
+  }
 
-    .about-img-main img {
-        height: 300px;
-    }
+  /* Buttons */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
 
-    .about-img-secondary {
-        width: 130px;
-    }
+  /* Service list */
+  .service-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 
-    .about-img-secondary img {
-        height: 120px;
-    }
+  .service-list-item .service-arrow {
+    display: none;
+  }
 
-    .experience-badge {
-        padding: 15px 18px;
-    }
+  /* Page header */
+  .page-header {
+    padding: 32px 0;
+  }
 
-    .exp-number {
-        font-size: 32px;
-    }
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
 
-    .cta-section {
-        padding: 60px 0;
-    }
-
-    .cta-content h2 {
-        font-size: 24px;
-    }
-
-    .cta-content p {
-        font-size: 15px;
-    }
-
-    .stat-number {
-        font-size: 28px;
-    }
-
-    .contact-info-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        padding: 25px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
-
-    .btn-lg {
-        padding: 14px 30px;
-        font-size: 15px;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    .team-card-img {
-        height: 220px;
-    }
-
-    .map-section {
-        height: 300px;
-    }
-
-    .logo-text strong {
-        font-size: 20px;
-    }
-
-    .logo-text small {
-        font-size: 8px;
-    }
-
-    .logo-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    /* TrionX-specific */
-    .industries-home-grid {
-        grid-template-columns: 1fr;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-
-    .industry-home-item {
-        height: 160px;
-    }
-
-    .why-rts-grid {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    .service-area-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .contact-about-highlights {
-        grid-template-columns: 1fr;
-    }
-
-    .solution-card-image {
-        height: 180px;
-    }
-
-    .solution-card-body {
-        padding: 22px;
-    }
-
-    .industry-card-header {
-        height: 140px;
-    }
-
-    .industry-card-body {
-        padding: 30px 20px 20px;
-    }
-
-    .partner-types {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        margin: 30px auto 0;
-    }
-
-    .service-detail-img img {
-        height: 250px;
-    }
-
-    .footer-social a {
-        width: 36px;
-        height: 36px;
-    }
+  /* Map */
+  .map-section iframe {
+    height: 240px;
+  }
 }
